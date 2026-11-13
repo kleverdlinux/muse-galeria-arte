@@ -1,0 +1,142 @@
+/* Sistema de diseno principal con Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* Definicion de tokens de diseno: paleta de colores editorial, tipografias y relaciones de aspecto */
+@theme {
+  --color-bone: #F4EFE6;
+  --color-paper: #FAF7F1;
+  --color-ink: #161413;
+  --color-oxblood: #6B2B1F;
+  --color-ash: #8A8780;
+  --color-border: #16141319;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-italic: 'Instrument Serif', serif;
+
+  --tracking-micro: 0.2em;
+  --tracking-meta: 0.3em;
+
+  --aspect-portrait: 3 / 4;
+  --aspect-landscape: 4 / 3;
+  --aspect-painting: 5 / 7;
+}
+
+/* Estilos base: reseteo tipografico, color de fondo bone y ocultamiento estético de barras de scroll */
+@layer base {
+  html {
+    position: relative;
+    background-color: #F4EFE6;
+    color: #161413;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body {
+    background-color: #F4EFE6;
+    color: #161413;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Oculta el cursor nativo del sistema en pantallas de escritorio cuando el cursor magnetico esta activo */
+  @media (min-width: 768px) {
+    html.has-magnetic-cursor,
+    html.has-magnetic-cursor * {
+      cursor: none !important;
+    }
+  }
+
+  /* Restablece el cursor nativo si el usuario activo preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce) {
+    html.has-magnetic-cursor,
+    html.has-magnetic-cursor * {
+      cursor: auto !important;
+    }
+  }
+}
+
+/* Clases tipograficas para serif titular Fraunces y serif italica Instrument Serif */
+.font-display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-feature-settings: 'ss01', 'ss02';
+  font-optical-sizing: auto;
+}
+
+.font-italic {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+}
+
+/* Filtro SVG fractal de grano cinematografico tipo revista impresa */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+}
+
+/* Mascara de degradado lateral para difuminar los extremos de la marquesina */
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Letra capitular editorial clasica para parrafos de curaduria */
+.dropcap::first-letter {
+  font-family: 'Fraunces', Georgia, serif;
+  font-feature-settings: 'ss01', 'ss02';
+  font-size: 4.5em;
+  line-height: 0.78;
+  float: left;
+  padding-top: 0.08em;
+  padding-right: 0.14em;
+  color: #6B2B1F;
+  font-weight: 300;
+}
+
+/* Tratamiento visual de calidez sepia museistica sobre las imagenes */
+.sepia-tint {
+  filter: sepia(0.15) saturate(0.92) contrast(1.02);
+}
+
+/* Modo de escritura vertical para el indicador lateral de scroll */
+.vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+/* Animacion de la linea indicadora de desplazamiento */
+@keyframes scrollCueLine {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scroll-line {
+  animation: scrollCueLine 2.4s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-line {
+    animation: none;
+  }
+}
