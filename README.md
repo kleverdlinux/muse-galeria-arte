@@ -8,7 +8,7 @@
 
 ---
 
-## 🏛️ Descripción del Proyecto
+## Descripción del Proyecto
 
 **Muse** es una aplicación web tipo *Single Page Application* (SPA) diseñada bajo un concepto editorial contemporáneo y curatorial de alta gama. Combina una arquitectura modular de componentes reactivos en **React 19** con tipado estricto en **TypeScript**, un sistema de diseño con tokens semánticos en **Tailwind CSS v4**, desplazamiento inercial cinemático con **Lenis**, y microinteracciones de física de resortes mediante **Motion**.
 
@@ -16,7 +16,7 @@ El proyecto resuelve la necesidad de una galería de arte internacional con sede
 
 ---
 
-## 🚀 Tecnologías y Librerías Utilizadas
+## Tecnologías y Librerías Utilizadas
 
 | Categoría | Tecnología / Herramienta | Versión / Función |
 | :--- | :--- | :--- |
@@ -31,7 +31,7 @@ El proyecto resuelve la necesidad de una galería de arte internacional con sede
 
 ---
 
-## ✨ Características Principales
+## Características Principales
 
 1. **Sincronización Horaria Global en Tiempo Real:** Cabecera interactiva que calcula y formatea automáticamente la hora local de Londres (BST), Kioto (JST) y CDMX (CST) mediante la API nativa `Intl.DateTimeFormat`.
 2. **Exposición en Sala ("Luz Serena"):** Cuadrícula curatorial de pinturas con efectos visuales de textura analógica, grano cinematográfico y filtros sepia.
@@ -42,7 +42,7 @@ El proyecto resuelve la necesidad de una galería de arte internacional con sede
 
 ---
 
-## 📂 Arquitectura del Proyecto
+## Arquitectura del Proyecto
 
 ```text
 muse-galeria-arte/
@@ -76,7 +76,7 @@ muse-galeria-arte/
 
 ---
 
-## 🛠️ Instalación y Ejecución Local
+## Instalación y Ejecución Local
 
 ### 1. Clonar el repositorio
 ```bash
@@ -109,14 +109,14 @@ Genera la versión optimizada y minificada en la carpeta `dist/`.
 
 ---
 
-## 🌐 Despliegue en Producción
+## Despliegue en Producción
 
 - **Repositorio GitHub:** [https://github.com/kleverdlinux/muse-galeria-arte](https://github.com/kleverdlinux/muse-galeria-arte)
 - **Demostración en Vivo (Render):** [https://muse-arte-kleverd.onrender.com](https://muse-arte-kleverd.onrender.com)
 
 ---
 
-## 👤 Autor
+## Autor
 
 - **Estudiante:** Kleverd Gabriel Apaza Quispe
 - **ID:** `001643199` | **Bloque:** `49PIADS501`
