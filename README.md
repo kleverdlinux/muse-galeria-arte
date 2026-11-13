@@ -112,7 +112,7 @@ Genera la versión optimizada y minificada en la carpeta `dist/`.
 ## 🌐 Despliegue en Producción
 
 - **Repositorio GitHub:** [https://github.com/kleverdlinux/muse-galeria-arte](https://github.com/kleverdlinux/muse-galeria-arte)
-- **Despliegue en Render / Cloud:** Enlace generado para revisión docente en vivo.
+- **Demostración en Vivo (Render):** [https://muse-arte-kleverd.onrender.com](https://muse-arte-kleverd.onrender.com)
 
 ---
 
@@ -122,3 +122,4 @@ Genera la versión optimizada y minificada en la carpeta `dist/`.
 - **ID:** `001643199` | **Bloque:** `49PIADS501`
 - **Institución:** SENATI — Dirección Zonal Puno / UCP Juliaca ETI
 - **Año:** 2026
+
